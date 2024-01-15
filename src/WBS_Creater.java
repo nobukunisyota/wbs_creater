@@ -10,10 +10,12 @@ public class WBS_Creater {
         String cmdline = args[0];
         if (cmdline.equals("create")) {
             Create create = new Create();
-            create.print_call_method(args);
+            create.print_call_method();
+            create.print_function_end();
         } else if (cmdline.equals("update")) {
             Update update = new Update();
-            update.print_call_method(args);
+            update.print_call_method();
+            update.print_function_end();
         } else {
             System.out.println("Invalid command line argument");
             System.exit(1);
