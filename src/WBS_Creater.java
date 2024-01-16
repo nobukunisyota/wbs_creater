@@ -11,10 +11,18 @@ public class WBS_Creater {
         if (cmdline.equals("create")) {
             Create create = new Create();
             create.print_call_method();
+            if (!create.is_file_exist("test.json")) {
+                System.out.println("test.json is not exist");
+                System.exit(1);
+            }
             create.print_function_end();
         } else if (cmdline.equals("update")) {
             Update update = new Update();
             update.print_call_method();
+            if (!update.is_file_exist("test.json")) {
+                System.out.println("test.json is not exist");
+                System.exit(1);
+            }
             update.print_function_end();
         } else {
             System.out.println("Invalid command line argument");
