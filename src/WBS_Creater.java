@@ -15,6 +15,7 @@ public class WBS_Creater {
                 System.out.println("test.json is not exist");
                 System.exit(1);
             }
+            create.create_method();
             create.print_function_end();
         } else if (cmdline.equals("update")) {
             Update update = new Update();
@@ -23,6 +24,9 @@ public class WBS_Creater {
                 System.out.println("test.json is not exist");
                 System.exit(1);
             }
+            update.insert_method();
+            update.update_method();
+            update.delete_method();
             update.print_function_end();
         } else {
             System.out.println("Invalid command line argument");

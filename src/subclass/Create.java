@@ -13,28 +13,24 @@ public class Create extends Base {
         return Files.exists(path);
     }
 
-    public boolean create() {
+    public boolean create_method() {
+        Scanner scan = new Scanner(System.in);
         while (true) {
             System.out.println("continue? (y/n)");
-            Scanner is_continue_flag = new Scanner(System.in);
-            try (is_continue_flag) {
-                switch (is_continue_flag.next()) {
-                    case "y":
-                        System.out.println("continue");
-                        break;
-                    case "n":
-                        System.out.println("exit");
-                        return true;
-                    default:
-                        System.out.println("Invalid input");
-                        continue;
-                }
-            } catch (Exception e) {
-                System.out.println(e);
-                return false;
+            String is_continue_flag = scan.next();
+            switch (is_continue_flag) {
+                case "y":
+                    System.out.println("continue");
+                    continue;
+                case "n":
+                    System.out.println("exit");
+                    scan.close();
+                    return true;
+                default:
+                    System.out.println("Invalid input");
+                    continue;
             }
         }
-        return true;
     }
 
     public void print_function_end() {

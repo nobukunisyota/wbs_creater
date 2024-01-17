@@ -14,6 +14,21 @@ public class Update extends Base {
         return Files.exists(path);
     }
 
+    public boolean insert_method() {
+        System.out.println("Inserting");
+        return false;
+    }
+
+    public boolean update_method() {
+        System.out.println("Updating");
+        return true;
+    }
+
+    public boolean delete_method() {
+        System.out.println("Deleting");
+        return false;
+    }
+
     public void print_function_end() {
         System.out.println("Update function end");
     }
