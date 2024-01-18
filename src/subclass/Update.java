@@ -4,7 +4,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class Update extends Base {
+public class Update {
     public void print_call_method() {
         System.out.println("Updating Mode");
     }

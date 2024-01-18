@@ -3,7 +3,7 @@ package subclass;
 import java.nio.file.*;
 import java.util.Scanner;
 
-public class Create extends Base {
+public class Create {
     public void print_call_method() {
         System.out.println("Creating Mode");
     }
