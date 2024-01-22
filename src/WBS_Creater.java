@@ -17,8 +17,8 @@ public class WBS_Creater {
         if (cmdline.equals("create")) {
             Create create = new Create();
             common.print_call_method(cmdline);
-            if (!common.is_file_exist("test.json")) {
-                System.out.println("test.json is not exist");
+            if (!common.is_file_exist("input.csv")) {
+                System.out.println("input.csv is not exist");
                 System.exit(1);
             }
             create.create_method();
@@ -26,8 +26,8 @@ public class WBS_Creater {
         } else if (cmdline.equals("update")) {
             Update update = new Update();
             common.print_call_method(cmdline);
-            if (!common.is_file_exist("test.json")) {
-                System.out.println("test.json is not exist");
+            if (!common.is_file_exist("input.csv")) {
+                System.out.println("input.csv is not exist");
                 System.exit(1);
             }
             update.insert_method();
