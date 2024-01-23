@@ -9,16 +9,17 @@ public class WBS_Creater {
             System.exit(1);
         }
         String cmdline = args[0];
+        String filename = "input.csv";
 
         // Create common instance
         Common_func common = new Common_func();
 
         // Call method
         if (cmdline.equals("create")) {
-            Create create = new Create();
+            Create create = new Create(filename);
             common.print_call_method(cmdline);
-            if (!common.is_file_exist("input.csv")) {
-                System.out.println("input.csv is not exist");
+            if (!common.is_file_exist(filename)) {
+                System.out.println(filename + " is not exist");
                 System.exit(1);
             }
             create.create_method();
@@ -26,8 +27,8 @@ public class WBS_Creater {
         } else if (cmdline.equals("update")) {
             Update update = new Update();
             common.print_call_method(cmdline);
-            if (!common.is_file_exist("input.csv")) {
-                System.out.println("input.csv is not exist");
+            if (!common.is_file_exist(filename)) {
+                System.out.println(filename + " is not exist");
                 System.exit(1);
             }
             update.insert_method();
